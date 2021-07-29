@@ -16,8 +16,39 @@ search.addEventListener('click', () => {
   alert('dvsdv');
 })
 
-const navMenu = document.querySelectorAll('.nav_link');
+const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
+const tabsItems = document.querySelectorAll(".tabs__item");
+tabsBtn.forEach(onTabClick);
 
-/*for(let i = 0; i < navMenu.length; i++) {
+function onTabClick(item) {
+    item.addEventListener("click", function() {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute("data-tab");
+        let currentTab = document.querySelector(tabId);
 
-}*/
+        if( ! currentBtn.classList.contains('active') ) {
+            tabsBtn.forEach(function(item) {
+                item.classList.remove('active');
+            });
+    
+            tabsItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+    
+            currentBtn.classList.add('active');
+            currentTab.classList.add('active');
+        }
+    });
+}
+
+document.querySelector('.tabs__nav-btn').click();
+
+
+/*slider*/
+const sliderDots = document.querySelectorAll('.slider-dots_item');
+let banner = document.querySelector('.banner');
+for(i of sliderDots) { i.addEventListener('click', () => {
+  banner.style.backg
+})
+
+}

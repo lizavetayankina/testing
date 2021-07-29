@@ -147,40 +147,74 @@ button {
   height: 50px;
 }
 
-.navigation {
-  width: 821px;
-  margin: auto;
-}
-
-nav {
-  text-align: center;
+.tabs__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 821px;
+  margin: auto;
+  text-align: center;
 }
 
-.nav_link {
-  text-decoration: none;
-  color: #000000;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: 'Museo Sans Cyrl', 'sans-serif';
-  padding: 20px 20px;
+.tabs__content {
+  background-color: #fff;
 }
 
-.nav_link:hover {
+.tabs__item {
+  display: none;
+}
+
+.tabs__item.active {
+  display: block;
+  background-color: #fff;
+}
+
+.tabs__nav-btn {
+  border: none;
+  background-color: #FFFFFF;
+  padding: 0px 20px;
+}
+
+.tabs__nav-btn:hover {
   background-color: #f29700;
   color: #F3F3F3;
 }
 
-.nav_link.active {
+.tabs__nav-btn.active {
   background-color: #323232;
   color: #F3F3F3;
 }
 
+/*.navigation {
+    width: 821px;
+    margin: auto;
+}
+nav {
+    text-align: center;
+    display: flex;
+}
+
+    .nav_link {
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: 'Museo Sans Cyrl', 'sans-serif';
+        padding: 20px 20px;
+    &:hover {
+        background-color: #f29700;
+        color: #F3F3F3;
+    }
+    &.active {
+        background-color: #323232;
+        color: #F3F3F3;
+    }
+    }
+*/
 .banner {
   width: 100%;
   padding-top: 60px;
+  padding-bottom: 23px;
   background-image: url("/img/Shape 4.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -200,7 +234,6 @@ nav {
 .item__title {
   color: #fff;
   width: 650px;
-  margin-left: 120px;
 }
 
 .item__title-headerTwo {
@@ -208,6 +241,12 @@ nav {
   display: inline-block;
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.dots {
+  width: 120px;
+  display: block;
+  margin: auto;
 }
 
 .slider__dots {
@@ -271,17 +310,18 @@ nav {
   background-color: #F3F3F3;
 }
 
-.item {
+.item_cl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0;
 }
 
-.item img {
+.item_cl img {
   margin-right: 12px;
 }
 
-.item a {
+.item_cl a {
   cursor: pointer;
   text-decoration: none;
   color: #323232;
@@ -290,7 +330,7 @@ nav {
   font-family: 'Museo Sans Cyrl', 'sans-serif';
 }
 
-.item a:hover {
+.item_cl a:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

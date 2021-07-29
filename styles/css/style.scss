@@ -133,7 +133,39 @@ button {
     height: 50px;
 }
 
-.navigation {
+.tabs__nav {
+    display: flex;
+    width: 821px;
+    margin: auto;
+    text-align: center;
+}
+.tabs__content {
+    background-color: #fff;
+}
+.tabs__item {
+    display: none;
+}
+
+.tabs__item.active {
+    display: block;
+    background-color: #fff;
+} 
+
+.tabs__nav-btn {
+border: none;
+background-color: #FFFFFF;
+padding: 0px 20px;
+&:hover {
+    background-color: #f29700;
+        color: #F3F3F3;
+}
+&.active {
+    background-color: #323232;
+    color: #F3F3F3;
+}
+}
+
+/*.navigation {
     width: 821px;
     margin: auto;
 }
@@ -158,10 +190,11 @@ nav {
         color: #F3F3F3;
     }
     }
-
+*/
     .banner {
         width: 100%;
         padding-top: 60px;
+        padding-bottom: 23px;
         background-image: url('/img/Shape\ 4.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -179,7 +212,6 @@ nav {
         &__title {
             color: #fff;
             width: 650px;
-            margin-left: 120px;
             &-headerTwo {
                 background-color: #f29700;
                 display: inline-block;
@@ -187,6 +219,12 @@ nav {
                   
             }
         }
+    }
+    .dots {
+    width: 120px;
+    display: block;
+    margin: auto;
+    
     }
     .slider__dots {
         text-align: center;
@@ -206,6 +244,8 @@ nav {
         background-color: #f29700;
         border-color: #f29700;
     }
+
+   
   .services {
       width: 100%;
       margin: auto;
@@ -234,8 +274,9 @@ nav {
             
         }  
     }
-    .item {
+    .item_cl {
         display: flex;
+        margin-left: 0;
     
     & img {
         margin-right: 12px;
