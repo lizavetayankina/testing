@@ -165,32 +165,6 @@ padding: 0px 20px;
 }
 }
 
-/*.navigation {
-    width: 821px;
-    margin: auto;
-}
-nav {
-    text-align: center;
-    display: flex;
-}
-
-    .nav_link {
-        text-decoration: none;
-        color: #000000;
-        font-size: 18px;
-        line-height: 22px;
-        font-family: 'Museo Sans Cyrl', 'sans-serif';
-        padding: 20px 20px;
-    &:hover {
-        background-color: #f29700;
-        color: #F3F3F3;
-    }
-    &.active {
-        background-color: #323232;
-        color: #F3F3F3;
-    }
-    }
-*/
     .banner {
         width: 100%;
         padding-top: 60px;
@@ -235,14 +209,18 @@ nav {
         height: 12px;
         width: 12px;
         margin: 0 2px;
-       border: 1px solid #fff;
+        border: 1px solid #f29700;
         display: inline-block;
         transition: background-color 0.2s ease;
     }
-    .active,
+    
     .slider-dots_item:hover {
         background-color: #f29700;
-        border-color: #f29700;
+        
+    }
+
+    .slider-dots_item.active {
+        background-color: #f29700;
     }
 
    
@@ -293,4 +271,85 @@ nav {
         text-decoration: underline;
     }
 }
+}
+
+
+
+
+
+@media (min-width:768px) and (max-width: 991px) {
+header {
+    width: 100%;
+}
+.container {
+    width: 100%;
+    margin: auto;
+}
+input[type="search"]  {
+    width: 200px;
+}
+.serves {
+    flex-flow: column wrap;
+    align-items: center;
+
+}
+.item_cl {
+    width: 250px;
+}
+}
+
+@media (min-width:576px) and (max-width: 767px) {
+    header {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+    input[type="search"]  {
+        width: 200px;
+    }
+
+    .tabs__nav {
+        width: 576px;
+    }
+    .tabs__nav-btn {
+        padding: 0px 10px;
+    }
+    .serves {
+        flex-flow: column wrap;
+        align-items: center;
+    
+    }
+    .item_cl {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+    input[type="search"]  {
+        width: 200px;
+    }
+
+    .tabs__nav {
+        width: 576px;
+    }
+    .tabs__nav-btn {
+        padding: 0px 10px;
+    }
+    .serves {
+        flex-flow: column wrap;
+        align-items: center;
+    
+    }
+    .item_cl {
+        width: 250px;
+    }
 }
