@@ -45,47 +45,60 @@ document.querySelector('.tabs__nav-btn').click();
 
 
 /*slider*/
-const slider = document.querySelector('.slider');
-const dots1 = document.getElementById('slider-dots_item_1');
-const dots2 = document.getElementById('slider-dots_item_2');
-const dots3 = document.getElementById('slider-dots_item_3');
-const dots4 = document.getElementById('slider-dots_item_4');
-const dots5 = document.getElementById('slider-dots_item_5');
+const slides = document.querySelectorAll('.item'),
+ dots = document.querySelectorAll('.slider-dots_item'),
+ prev = document.getElementById('btn-prev'),
+ next = document.getElementById('btn-next');
 
-let sliderIndex = 1;
-showSlides(sliderIndex);
+ let index = 0;
 
-function plusSlider(n) {
-  showSlides(sliderIndex += n);
-};
+ const activeSlide = n => {
+     console.log(n);
+     for (slide of slides) {
+         slide.classList.remove('active');
+         slides[n].classList.add('active');
+     }
+ }
 
-function previousSlide(n) {
-  showSlides(slideIndex -= n);  
+ const activeDots = n => {
+   console.log(n);
+   for (dot of dots) {
+       dot.classList.remove('active');
+      dots[n].classList.add('active');
+   }
 }
 
-function currentSlide(n) {
-  showSlides(sliderIndex = n);
+const prepareCurentSlide = ind => {
+activeSlide(ind);
+activeDots(ind);
+}
+const nextSlide = () => {
+if(index == slides.length - 1 ) {
+   index = 0;
+   prepareCurentSlide(index); 
+} else {
+   index++;
+   prepareCurentSlide(index); 
+   }
+}
+ const prevSlide = () => {
+   if(index == 0) {
+       index = slides.length - 1 
+       prepareCurentSlide(index); 
+   } else {
+       index--;
+       prepareCurentSlide(index); 
+   }
 }
 
-function showSlides(n) {
-  let i;
-  const slider = document.querySelectorAll('.item__sl');
-  const dots = document.querySelectorAll('.slider-dots_item');
+dots.forEach((item, indexDot) => {
+ item.addEventListener('click', ()=> {
+     index = indexDot;
+     prepareCurentSlide(index);
 
-if (n > slider.length) {
-sliderIndex = 1;
-}
+})
+})
 
-if (n < 1) {
-sliderIndex = slider.length;
-}
-
-for ( i = 0; i < slider.length; i++) {
-slider[i].style.display = "none";
-dots[i].classList.add('active');
-}
+ 
 
 
-slider[sliderIndex - 1].style.display='block';
-dots[sliderIndex - 1].className='active';
-}

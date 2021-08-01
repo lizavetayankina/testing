@@ -181,7 +181,7 @@ padding: 0px 20px;
     }
     .item {
         margin-left: 40px;
-        display: inline-block;
+        display: none;
         
         &__title {
             color: #fff;
@@ -194,6 +194,16 @@ padding: 0px 20px;
             }
         }
     }
+ 
+    .item.active {
+        display: block;
+    }
+  #btn-prev {
+      color: #fff;
+  }
+  #btn-next {
+    color: #fff;
+}
     .dots {
     width: 120px;
     display: block;
