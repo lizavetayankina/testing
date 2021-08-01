@@ -134,6 +134,7 @@ input[type="search"] {
   line-height: 19px;
   color: #000000;
   font-family: 'Museo Sans Cyrl', 'sans-serif';
+  font-weight: 400;
 }
 
 input[type="submit"] {
@@ -173,6 +174,9 @@ button {
   border: none;
   background-color: #FFFFFF;
   padding: 0px 20px;
+  font-size: 18px;
+  font-family: 'Museo Sans Cyrl', 'sans-serif';
+  font-weight: 400;
 }
 
 .tabs__nav-btn:hover {
@@ -211,10 +215,30 @@ button {
 }
 
 .item__title-headerTwo {
-  background-color: #f29700;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Museo Sans Cyrl', 'sans-serif';
+  padding: 11px 20px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: #E69A37;
   display: inline-block;
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.item__title h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 68px;
+  font-family: 'Museo Sans Cyrl', 'sans-serif';
+}
+
+.item__title p {
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 28px;
+  font-family: 'Museo Sans Cyrl', 'sans-serif';
 }
 
 .item.active {
