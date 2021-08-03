@@ -10,18 +10,33 @@ for(let nav of menu) {
   })
 }
 
-function getValue () {
-  
-  const inputValue = document.querySelector('input').value;
-  let serchInfo = { info: inputValue };
-  console.log(serchInfo);
+/*search*/
+let userSearch = [];
+function getValue() {
+ let inputValue = document.querySelector('input').value;
+ const id = Date.now();
+  let serchInfo = { info: inputValue, id };
+ 
+
+  userSearch.push(serchInfo);
+  console.log(userSearch);
+  clear();
 }
+ function clear() {
+  let inp = document.querySelector('input[type="search"]');
+    inp.value = "";
+ }
 
-
-const search = document.querySelector('.icon_search');
-search.addEventListener('click', () => {
-  getValue();
-  
+ function validForm() {
+  const inp = document.querySelector('input[type="search"]');
+  if (!inp.value) { inp.classList.add('error'); } else {
+    inp.classList.remove('error');
+    getValue();
+  }
+}
+const searchIcon = document.querySelector('.icon_search');
+searchIcon.addEventListener('click', () => {
+  validForm()
 })
 
 const tabsBtn = document.querySelectorAll(".tabs__nav-btn");

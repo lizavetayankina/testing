@@ -144,6 +144,12 @@ input[type="submit"] {
   border: none;
 }
 
+input.error {
+  border-color: red;
+  border: 8px, solid;
+  border-radius: 8px;
+}
+
 button {
   height: 50px;
 }
