@@ -10,10 +10,18 @@ for(let nav of menu) {
   })
 }
 
-const search = document.querySelector('.icon_search');
+function getValue () {
+  
+  const inputValue = document.querySelector('input').value;
+  let serchInfo = { info: inputValue };
+  console.log(serchInfo);
+}
 
+
+const search = document.querySelector('.icon_search');
 search.addEventListener('click', () => {
-  alert('dvsdv');
+  getValue();
+  
 })
 
 const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
