@@ -193,8 +193,7 @@ button {
   width: 100%;
   padding-top: 60px;
   padding-bottom: 23px;
-  background-image: url("/img/Bg.jpg");
-  background-repeat: no-repeat;
+  background-image: url("/img/bg.jpg");
   background-position: center;
   background-size: cover;
 }
