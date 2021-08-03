@@ -190,7 +190,7 @@ font-weight: 400;
         display: none;
         &__title {
             color: #fff;
-            width: 650px;
+            width: 600px;
             &-headerTwo {
                 font-size: 13px;
                 font-weight: 700;
@@ -214,6 +214,7 @@ font-weight: 400;
                 font-weight: normal;
                 line-height: 28px;
                 font-family: 'Museo Sans Cyrl', 'sans-serif'; 
+                text-align: justify;
             }
         }
     }

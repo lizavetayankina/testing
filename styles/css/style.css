@@ -216,7 +216,7 @@ button {
 
 .item__title {
   color: #fff;
-  width: 650px;
+  width: 600px;
 }
 
 .item__title-headerTwo {
@@ -244,6 +244,7 @@ button {
   font-weight: normal;
   line-height: 28px;
   font-family: 'Museo Sans Cyrl', 'sans-serif';
+  text-align: justify;
 }
 
 .item.active {
